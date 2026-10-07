@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline GPS Location Finder | Navigation, Tracking & Aviation Planning</title>
+    <meta name="description" content="Discover, save, and plan your global journeys with Offline GPS Location Finder. The offline-first navigation, tracking, and aviation planning tool for digital nomads, hikers, off-grid explorers, and pilots.">
+    <meta name="keywords" content="travel app, offline GPS, route planner, digital nomad tools, hiking tracker, E6B flight computer, weight and balance calculator, preflight checklist">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --secondary: #5856D6;
+            --bg: #0A0A0C;
+            --text: #F5F5F7;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, #1A1A2E 0%, #0A0A0C 100%);
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFF 0%, #AAA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: var(--primary);
+            color: white;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 122, 255, 0.4);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 32px;
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="hero-title fade-in">Offline GPS Location Finder</h1>
+        <p class="hero-subtitle fade-in" style="animation-delay: 0.2s">Navigate, track, and plan <span class="highlight">flights and journeys</span>. Map, plan, and discover with zero connectivity.</p>
+        <a href="#features" class="cta-button fade-in" style="animation-delay: 0.4s">Start Exploring</a>
+    </header>
+
+    <section id="features">
+        <h2 style="font-size: 2.5rem; text-align: center;">Built for the Modern Explorer</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>SOS Emergency Beacon</h3>
+                <p>Morse code screen strobe, high-decibel audio horn, and 1-tap satellite SMS location payloads for emergency dispatch.</p>
+            </div>
+            <div class="card">
+                <h3>Backtrack Retrace</h3>
+                <p>Retrace exact footsteps from any logged track with real-time cross-track error measurement and off-route drift alerts.</p>
+            </div>
+            <div class="card">
+                <h3>E6B Flight Computer</h3>
+                <p>Offline aviation computer for Wind Triangle heading correction, crosswind/headwind vectors, and fuel endurance range planning.</p>
+            </div>
+            <div class="card">
+                <h3>Terrain Inclinometer</h3>
+                <p>Live CoreMotion slope pitch meter and gradient calculation with dynamic Avalanche Danger Spectrum warnings.</p>
+            </div>
+            <div class="card">
+                <h3>Magnetic Declination WMM</h3>
+                <p>Integrated World Magnetic Model computing True North (°T) vs Magnetic North (°M) bearings anywhere on Earth.</p>
+            </div>
+            <div class="card">
+                <h3>Tactical Night Vision</h3>
+                <p>Monochromatic dark red NVG visual overlay designed for night aviation, stargazing, and preserving dark adaptation.</p>
+            </div>
+            <div class="card">
+                <h3>Airport NavData</h3>
+                <p>Offline global airport directory featuring runway geometry, magnetic headings, and communication frequencies (ATIS, Tower, Ground).</p>
+            </div>
+            <div class="card">
+                <h3>Weight & Balance Calculator</h3>
+                <p>Persisted profiles for every aircraft you fly, with a live CG envelope check against certified limits before every load.</p>
+            </div>
+            <div class="card">
+                <h3>Preflight Checklist</h3>
+                <p>A customizable VFR run-through covering weather, walk-around, fuel, and personal readiness — with departure logging.</p>
+            </div>
+            <div class="card">
+                <h3>Pilot Logbook</h3>
+                <p>Track total flight time and day/night landing currency against the FAR 61.57 3-in-90-days requirement, fully offline.</p>
+            </div>
+            <div class="card">
+                <h3>Takeoff & Landing Performance</h3>
+                <p>Density altitude, weight, and wind-adjusted runway distance estimates, checked against your available runway length.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="discovery" style="background: var(--glass); border-radius: 40px; margin-top: 50px;">
+        <div style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Your Data, Your Control</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: rgba(255,255,255,0.7);">Offline GPS Location Finder is built with privacy at its core. All your saved locations, routes, and notes stay on your device. No cloud, no tracking, just discovery.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Offline GPS Location Finder. Designed for explorers by explorers.</p>
+    </footer>
+
+</body>
+</html>
